@@ -15,15 +15,18 @@
 :root {
   	--white: #fff;
   	--black: #000;
-  	--body-font: Arial, Helvetica, sans-serif;
-	--heading-font: Arial, Helvetica, sans-serif;
+	--dark-gray: #333;
+	--gray: #666;
+	--light-gray: #999;
+  	--body-font: "pragmatica", sans-serif;
+	--heading-font: "p22-mackinac-pro", serif;
 	--container-width: 90vw;
 	--container-max-width: 1600px;
 	--container-outer-padding: 50px;
 	--container-outer-margin: calc((100vw - var(--container-width)) / 2);
 	--viewport-edge: calc((var(--container-outer-margin) + var(--container-outer-padding)) * -1);
 	--gap: 40px;
-	--grid: repeat(12,1fr);
+	--grid: repeat(12, 1fr);
 }
 
 html {
@@ -75,37 +78,36 @@ h5,
 .heading-5,
 h6,
 .heading-6 {
+	font-family: var(--heading-font);
 	margin: 0;
 }
 
 h1,
 .heading-1 {
-	
+	font: 700 calc(50rem / 16)/calc(60 / 50) var(--heading-font);
 }
 
 h2,
 .heading-2 {
-	
+	font: 700 calc(40rem / 16)/calc(52 / 40) var(--heading-font);
 }
 
 h3,
 .heading-3 {
-	
+	font: 700 calc(36rem / 16)/calc(46 / 36) var(--heading-font);
 }
 
 h4,
 .heading-4 {
-	
+	font: 700 calc(24rem / 16)/calc(36 / 24) var(--heading-font);
 }
 
 h5,
 .heading-5 {
-	
 }
 
 h6,
 .heading-6 {
-	
 }
 
 p,
@@ -114,8 +116,11 @@ ol {
 	
 }
 
+.btn,
 .eyebrow {
 	display: block;
+	font: 900 calc(12rem / 16)/calc(18 / 12) var(--body-font);
+	letter-spacing: 1px;
 	text-transform: uppercase;
 }
 
@@ -178,11 +183,15 @@ article {
 /***Buttons***/
 
 .btn {
-	display: inline-block;
+	color: var(--dark-gray);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 5px;
 }
 
 .btn:hover {
-	
+	color: var(--gray);
+	text-decoration-color: var(--light-gray);
 }
 
 /***Form Styles***/
@@ -217,7 +226,11 @@ textarea::placeholder {
 /***************************************************************************************************************************************************************************************/
 
 header {
-	
+	padding: 30px 0;
+}
+
+header .flex {
+	align-items: center;
 }
 
 /***************************************************************************************************************************************************************************************/
@@ -232,11 +245,42 @@ footer {
 
 /***************************************************************************************************************************************************************************************/
 
-/*HOME STYLES*/
+/*INTRODUCTION STYLES*/
 
 /***************************************************************************************************************************************************************************************/
 
-/***Hero***/
+.introduction {
+	background: #eee;
+	padding: 80px 0;
+}
+
+.introduction h1 {
+	margin: 0;
+}
+
+.introduction ul {
+	list-style: none;
+	margin: 40px auto 0;
+	padding: 0;
+}
+
+.introduction li {
+	background: var(--white);
+	grid-column: span 4;
+	padding: 20px 30px 30px;
+}
+
+.introduction li .eyebrow {
+	margin-bottom: 6px;
+}
+
+.introduction li h2 {
+	margin: 0 0 12px;
+}
+
+.introduction li > p {
+	margin: 0 0 16px;
+}
 
 /***************************************************************************************************************************************************************************************/
 
